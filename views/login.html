@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% set pageID = "page-home-login" %}
+
+
+{% block style %}
+<link rel="stylesheet" href="css/page-home-login.css">
+{% endblock style %}
+
+
+
+    <div id="page-home-login">
+{% block content %}
+    
+<header>
+    <img src="/img/bndUru.png" alt="imagem bandeira de uruguaiana">
+
+                                      <h1>Entrar</h1>
+    </header>
+    
+    <form action="" method="post">
+
+    
+  <div class="divlogin">
+  <label for="email">Email: </label>
+  <input type="email" name="email" placeholder="Email" required autofocus>
+
+  <label for="senha" >Senha:</label>
+  <input type="password" name="senha" placeholder="senha" required>
+</div>
+
+
+  <div class="submit">
+  <button type="submit">Entrar</button>
+  
+  </div>
+  <div class="checkbox">
+  Ainda não é cadastrado?<a href="/cadastro">cadastre-se</a> 
+  
+  
+  </div>
+  
+        </form>
+        <div class="comercial">
+        <p>Uma colaboração Instituto Federal Farroupilha</p>
+        </div>
+        
+    {% endblock content %}
+
+  
+ 
+        
+</div>

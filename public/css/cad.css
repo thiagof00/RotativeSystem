@@ -1,0 +1,100 @@
+
+#page-home-cad {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  header {
+    margin-top: 48px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+  }
+  header h1 {
+    margin-top: 15px;
+  }
+  header img {
+    border-radius: 12px;
+  }
+  #page-home-cad form {
+   
+    background-color: white;
+      margin: 80px auto;
+      margin-top: 80px;
+      padding: 44px;
+      border-radius: 8px;
+      max-width: 730px;
+      box-sizing: border-box;
+      
+  }
+  .info{
+      display: flex;
+      flex-direction: column;
+  }
+  .info h2 {
+      margin-top: 22px;
+      margin-bottom: 24px;
+  }
+  .info-user {
+      border-top: 24px;
+      padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  justify-content: space-between;
+    border-bottom: 24px;
+  
+  }
+  .info-user,
+  .info-car label{
+    font-size: 22px;
+    color: var(--title-color);
+   
+  }
+  .info-user .ins{
+      flex: 1;
+      margin: 0;
+      border: 0;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+  }
+  .info-user .ins input[name="nome"],
+  .info-user .ins input[name="email"],
+  .info-user .ins input[name="cpf"],
+  .info-car .ins input[name="placa"]{
+      margin-right: 12px;
+  }
+  
+  
+
+  form input{
+      background-color: #f0f0f5;
+  
+      border: 0;
+      padding: 10px 16px;
+      font-size: 16px;
+  
+      border-radius: 8px;
+      
+  }
+ .info-car{
+  border-top: 24px;
+  padding: 12px;
+flex: 1;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+border-bottom: 24px;
+
+}
+  .info-car .ins{
+    flex: 2;
+    margin: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}

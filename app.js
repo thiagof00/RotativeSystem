@@ -1,32 +1,53 @@
 const express = require('express')
 const app = express()
-const supervisor = require("./routes/supervisor")
-const public = require("./routes/public")
-const handlebars = require("express-handlebars")
-const bodyparser = require("body-parser")
-const path = require ("path")
 const dataUser = require("./models/model")
 
 //config
-app.use(bodyparser.urlencoded({extended: true}))
-app.use(bodyparser.json())
 ///////////////////////
-app.engine('handlebars', handlebars({defaultLayout: 'main'}))
-app.set('view engine', 'handlebars')
+// template engine
+const nunjucks = require("nunjucks")
+nunjucks.configure("views", {
+    express: app,
+    noCache: true
+})
 
-///////////////////////
-app.use(express.static(path.join(__dirname, "public")))
+//habilitando o req.body
+app.use(express.urlencoded({extended:true}))
 
 
-/////////////////////////
+
+/////////////////////// pasta publica
+app.use(express.static("public"))
+
+
+
+///// rotas
 app.get("/", (req, res)=>{
     res.send("principal")
 })
 
-// rotas ///////
-app.use('/supervisor', supervisor)
-app.use("/public", public)
+// routes users///////
+app.get("/login", (req, res)=>{
+    res.render("login.html")
+})
+app.get("/cadastro", (req, res)=>{
+    res.render("cadastro.html")
+})
 
+
+
+
+
+
+
+
+// routes supervisor/////////////
+app.get("/supervisor", (req, res)=>{
+    res.render("supervisor.html")
+})
+
+
+////////////////////
 const PORT =8081
 app.listen(PORT, () => {
 console.log("servidor rodando")
