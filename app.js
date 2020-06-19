@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const dataUser = require("./models/model")
 
+
 //config
 ///////////////////////
 // template engine
@@ -17,7 +18,7 @@ app.use(express.urlencoded({extended:true}))
 
 
 /////////////////////// pasta publica
-app.use(express.static("public"))
+ app.use(express.static("public"))
 
 
 
@@ -32,6 +33,27 @@ app.get("/login", (req, res)=>{
 })
 app.get("/cadastro", (req, res)=>{
     res.render("cadastro.html")
+})
+app.post("/createuser", (req, res)=>{
+    dataUser.create({
+        nome: req.body.nome,
+        sobrenome: req.body.sobrenome,
+        cpf: req.body.cpf,
+        dataNasc: req.body.dataNasc,
+        senha: req.body.senha,
+// veículo
+
+        placa: req.body.placa,
+        modelo: req.body.modelo,
+        cor: req.body.cor,
+        ano: req.body.ano,
+        tipo: req.body.tipo
+
+    }).then(function (){
+        res.redirect("/login")
+    }).catch(function(err){
+        res.send("Houve um erro ao cadastrar você, nos desculpe. :( "+ err)
+    })
 })
 
 
@@ -50,5 +72,5 @@ app.get("/supervisor", (req, res)=>{
 ////////////////////
 const PORT =8081
 app.listen(PORT, () => {
-console.log("servidor rodando")
+console.log("servidor rodando na porta 8081")
 })

@@ -13,10 +13,19 @@ const dataUser = db.sequelize.define('dataUSer', {
             type: db.SQL.DATE,
             require:true
     },
+    cpf:{
+        type: db.SQL.STRING,
+        require:true
+    },
     email:{
         type: db.SQL.STRING,
         require:true
     },
+    senha:{
+        type: db.SQL.STRING,
+        require:true
+    }
+    ,
     placa:{
         type: db.SQL.STRING,
         require:true
@@ -28,6 +37,14 @@ const dataUser = db.sequelize.define('dataUSer', {
     cor:{
         type: db.SQL.STRING,
         require: true
+    },
+    ano:{
+        type:db.SQL.STRING,
+        require: true
+    },
+    tipo:{
+        type:db.SQL.STRING,
+        require:true
     }
 })
 

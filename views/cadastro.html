@@ -13,71 +13,102 @@
 <img src="/img/bndUru.png" alt="bandeira uruguaiana">
 <h1>Cadastrar-se</h1>
 </header>
-<form action="">
+
+<form action="/createuser" method="POST">
+
 <div class="info">
-<h2>Informações do motorista</h2>
+    <h2>Informações do motorista</h2>
 <div class="info-user">
 
-<div class="ins">
-<label for="nome">Nome</label>
-<input type="text" name="nome" required>
-</div>
+    <div class="ins">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" required>
+    </div>
 
-<div class="ins">
-<label for="sobrenome">Sobrenome</label>
-<input type="text" name="sobrenome" required>
-</div>
+    <div class="ins">
+    <label for="sobrenome">Sobrenome</label>
+    <input type="text" name="sobrenome" required>
+    </div>
 
 </div>
-<div class="info-user">
-
-<div class="ins">
-<label for="cpf">CPF</label>
-<input type="text" name="cpf" placeholder ="apenas numeros" required>
-</div>
-
-<div class="ins">
-<label for="dataNasc">Data de nascimento </label>
-<input type="date" name="dataNasc" required>
-</div>
-</div>
-
 
 <div class="info-user">
 
-<div class="ins">
-<label for="email">Email</label>
-<input type="text" name="email" required>
+    <div class="ins">
+    <label for="cpf">CPF</label>
+    <input type="text" name="cpf" placeholder ="apenas numeros" required>
+    </div>
+
+    <div class="ins">
+    <label for="dataNasc">Data de nascimento </label>
+    <input type="date" name="dataNasc" required>
+    </div>
 </div>
 
-<div class="ins">
-<label for="senha">Senha</label>
-<input type="password" name="senha" required>
-</div>
+
+<div class="info-user">
+
+    <div class="ins">
+    <label for="email">Email</label>
+    <input type="text" name="email" required>
+    </div>
+
+    <div class="ins">
+    <label for="senha">Senha</label>
+    <input type="password" name="senha" required>
+    </div>
 </div>
 
 <div class="info-user">
-<div class="ins">
-<label for="senha2">Repetir senha</label>
-<input type="password" name="senha2" required>
-</div>
+
+    <div class="ins">
+    <label for="senha2">Repetir senha</label>
+    <input type="password" name="senha2" required>
+    </div>
 
 </div>
-<div class="title">
-<h2>Informações do veículo</h2>
+
+        <div class="title">
+                <h2>Informações do veículo</h2>
+        </div>
+
+<div class="info-car">
+    <div class="ins">
+    <label for="placa">Placa do veículo</label>
+    <input type="text" name="placa" required>
+    </div>
+
+    <div class="ins">
+    <label for="modelo">Modelo</label>
+    <input type="text" name="modelo" required>
+    </div>
+</div>
+
+
+<div class="info-car">
+
+    <div class="ins">
+    <label for="cor">Cor</label>
+    <input type="text" name="cor" required>
+    </div>
+
+    <div class="ins">
+    <label for="ano">Ano</label>
+    <input type="text" name="ano" required>
+    </div>
 </div>
 
 <div class="info-car">
-<div class="ins">
-<label for="placa">Placa do veículo</label>
-<input type="text" name="placa" required>
+
+    <div class="ins">
+    <label for="tipo">Tipo do veículo</label>
+    <input type="text" name="tipo" required>
+    </div>
 </div>
 
-<div class="ins">
-<label for="modelo">Modelo</label>
-<input type="text" name="modelo" required>
-</div>
-</div>
+            <div class="submit">
+                <button type="submit" class="btn">Cadastrar</button>
+            </div>
 
 
 
