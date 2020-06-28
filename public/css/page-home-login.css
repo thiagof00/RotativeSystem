@@ -75,7 +75,7 @@ background-color: var(--primary-color);
     transition: 400ms;
 }
 #page-home-login p {
-  margin-bottom: 2px;
+  margin-bottom: 20px;
   color: #f0f0f5;
   text-align: center;
 }
